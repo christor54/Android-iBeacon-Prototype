@@ -1,0 +1,38 @@
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        applicationId "nearlab.erauvisit"
+        minSdkVersion 16
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    dependencies {
+        compile 'org.altbeacon:android-beacon-library:2+@aar'
+    }
+    compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.android.support:support-v13:20.0.0'
+}
+
+

@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MonitoringActivity" >
+
+    <TextView
+        android:id="@+id/monitoringText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp"
+        android:text=" Hi, I will be your guide for the visit"
+        android:ems="10"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/off_white"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:background="@color/dark_blue"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/Button01">
+
+        <requestFocus />
+    </TextView>
+
+    <WebView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/monitoringText" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onRangingClicked"
+        android:text="Closest Beacon"
+        android:background="#1d45b4e7"
+        android:layout_below="@+id/monitoringText"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Back to map"
+        android:id="@+id/go_back_map"
+        android:layout_alignBottom="@+id/webView"
+        android:background="#52e2e6d8"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
